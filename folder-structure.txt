@@ -1,0 +1,105 @@
+cake-shop-website/
+│
+├── package.json
+├── next.config.mjs
+├── tailwind.config.js
+├── postcss.config.mjs
+├── .env.local
+├── .gitignore
+│
+├── public/
+│   ├── images/
+│   │   ├── cakes/
+│   │   ├── categories/
+│   │   ├── hero/
+│   │   └── icons/
+│   └── fonts/
+│
+├── src/
+│   │
+│   ├── app/
+│   │   ├── layout.jsx              ← Root layout (Navbar + Footer)
+│   │   ├── page.jsx                ← Homepage
+│   │   ├── globals.css
+│   │   │
+│   │   ├── shop/
+│   │   │   └── page.jsx            ← /shop
+│   │   │
+│   │   ├── product/
+│   │   │   └── [id]/
+│   │   │       └── page.jsx        ← /product/123
+│   │   │
+│   │   ├── cart/
+│   │   │   └── page.jsx            ← /cart
+│   │   │
+│   │   ├── checkout/
+│   │   │   └── page.jsx            ← /checkout
+│   │   │
+│   │   ├── order-confirmation/
+│   │   │   └── page.jsx            ← /order-confirmation
+│   │   │
+│   │   ├── login/
+│   │   │   └── page.jsx            ← /login
+│   │   │
+│   │   └── profile/
+│   │       └── page.jsx            ← /profile
+│   │
+│   ├── components/
+│   │   ├── layout/
+│   │   │   ├── Navbar.jsx          ← নেভবার (সব লজিক এখানে)
+│   │   │   ├── Footer.jsx          ← ফুটার
+│   │   │   ├── MobileBottomNav.jsx ← মোবাইলের বটম নেভ
+│   │   │   └── SearchBar.jsx       ← সার্চ বার
+│   │   │
+│   │   ├── home/
+│   │   │   ├── HeroSection.jsx
+│   │   │   ├── Categories.jsx
+│   │   │   ├── TrendingCakes.jsx
+│   │   │   └── WhyChooseUs.jsx
+│   │   │
+│   │   ├── shop/
+│   │   │   ├── FilterSidebar.jsx
+│   │   │   ├── ProductGrid.jsx
+│   │   │   ├── ProductCard.jsx
+│   │   │   └── SortDropdown.jsx
+│   │   │
+│   │   ├── product/
+│   │   │   ├── ImageGallery.jsx
+│   │   │   ├── ProductInfo.jsx
+│   │   │   ├── QuantitySelector.jsx
+│   │   │   └── Reviews.jsx
+│   │   │
+│   │   ├── cart/
+│   │   │   ├── CartItemsList.jsx
+│   │   │   ├── CouponInput.jsx
+│   │   │   └── OrderSummary.jsx
+│   │   │
+│   │   ├── common/
+│   │   │   ├── Button.jsx
+│   │   │   ├── Input.jsx
+│   │   │   └── Loader.jsx
+│   │   │
+│   │   └── icons/
+│   │       ├── CartIcon.jsx
+│   │       ├── HeartIcon.jsx
+│   │       └── StarIcon.jsx
+│   │
+│   ├── context/
+│   │   ├── CartContext.tsx? No → CartContext.tsx? No → CartContext.jsx
+│   │   ├── AuthContext.jsx
+│   │   └── OrderContext.jsx
+│   │
+│   ├── data/
+│   │   └── products.js              ← মক ডাটা
+│   │
+│   ├── hooks/
+│   │   ├── useCart.js
+│   │   ├── useLocalStorage.js
+│   │   └── useFilter.js
+│   │
+│   └── utils/
+│       ├── constants.js
+│       ├── helpers.js
+│       └── couponCodes.js
+│
+└── README.md
