@@ -1,10 +1,9 @@
 import React from "react";
-import BaseButton from "../common/buttons/BaseButton";
 import Link from "next/link";
 
 const HeroSection = () => {
   return (
-    <div className="bg-gradient-to-r from-[#FFF0F5] to-white overflow-hidden py-12">
+    <div className="bg-gradient-to-r from-[#FFF0F5] to-white overflow-hidden py-14">
       <div className="width flex justify-between">
         {/* hero content */}
         <section className="flex flex-col justify-center">
@@ -25,6 +24,16 @@ const HeroSection = () => {
                 Shop Now
               </button>
             </Link>
+            <div className="my-8 flex items-center gap-4">
+              <div className="flex -space-x-3">
+                <img className="profile-avatar" src="https://i.pravatar.cc/100?img=1" alt="" />
+                <img className="profile-avatar" src="https://i.pravatar.cc/100?img=2" alt="" />
+                <img className="profile-avatar" src="https://i.pravatar.cc/100?img=3" alt="" />
+              </div>
+              <div>
+                <h4 className="text-on-surface-variant font-medium"><span className="text-primary font-bold">2.5k+</span>  Happy Customers</h4>
+              </div>
+            </div>
           </div>
         </section>
 

@@ -16,20 +16,17 @@ const poppins = Poppins({
   variable: "--font-poppins",
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
- 
-})
+});
 const inter = Inter({
   variable: "--font-inter",
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
- 
-})
+});
 const sans = Google_Sans_Flex({
   variable: "--font-google-sans",
- weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
- 
-})
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -42,15 +39,16 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`h-full antialiased ${poppins.variable} ${inter.variable} ${sans.variable}`}
     >
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=block"
+          rel="stylesheet"
+        />
+      </head>
       <body className={`min-h-full flex flex-col`}>
-        <div>
-          <Navbar/>
-        </div>
-        <main>
-
-        {children}
-        </main>
-        </body>
+        <Navbar />
+        <main>{children}</main>
+      </body>
     </html>
   );
 }

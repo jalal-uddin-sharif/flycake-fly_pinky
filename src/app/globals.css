@@ -8,11 +8,13 @@
   --font-sans-flex: var(--font-google-sans);
 
   --color-surface: #fcf9f8;
+  --color-on-surface-variant: #5b3f46;
+  --color-surface-container-low: #f0eded;
+  --color-surface-container: #fcf9f8;
   --color-primary: #FF2B85;
   --color-primary-container: #e30271;
   --color-secondary: #F7F7F7;
   --color-neutral: #1A1A1A;
-  --color-on-surface-variant: #5b3f46;
 
 }
 
@@ -29,6 +31,8 @@
  /* color  */
  --color-surface: var(--color-surface);
  --color-on-surface-variant: var(--color-on-surface-variant);
+ --color-surface-container-low: var(--color-surface-container-low);
+ --color-surface-container: var(--color-surface-container);
  --color-primary: var(--color-primary);
  --color-primary-container: var(--color-primary-container);
  --color-secondary: var(--color-secondary);
@@ -50,11 +54,11 @@ body {
   
 }
 
-h1,h2,h3{
+h1{
   font-family: var(--font-heading);
 }
 .width{
-max-width: 1280px;
+max-width: 1200px;
   margin: 0 auto;
 }
 .text-label-bold {
@@ -79,4 +83,27 @@ max-width: 1280px;
   font-width: 700;
   line-height: 1.2;
   letter-spacing: -0.02em;
+}
+
+.text-heading{
+  font-size: 32px;
+  line-height: 1.2;
+  /* letter-spacing: -0.2em; */
+  font-weight: 600;
+  font-family: var(--font-heading);
+
+}
+
+.profile-avatar{
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: 2px solid white;
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    display: inline-block;
+    line-height: 1;
+    vertical-align: middle;
 }

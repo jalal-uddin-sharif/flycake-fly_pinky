@@ -26,8 +26,8 @@ const Navbar = () => {
     },
   ];
   return (
-    <section className="bg-surface sticky z-50 shadow-md">
-      <div className="width px-6 py-4 flex justify-between">
+    <section className="bg-surface sticky top-0 z-50 shadow-md">
+      <div className="width py-4 flex justify-between">
         {/* logo */}
         <div>
           {/* <h1 className="text-primary font-bold text-2xl">FlyCake</h1> */}
@@ -56,11 +56,11 @@ const Navbar = () => {
         <div className="flex items-center gap-3">
           <div className="relative">
             <MdOutlineAddShoppingCart
-              className="text-on-surface-variant cursor-pointer"
-              size={25}
+              className="text-on-surface-variant cursor-pointer hover:scale-105 text-3xl"
+              // size={25}
             />
             <div className="absolute w-5 h-5 flex items-center justify-center bg-primary-container rounded-full -top-4 -right-2">
-                <p className="text-white text-[10px]">3</p>
+              <p className="text-white text-[10px]">12</p>
             </div>
           </div>
           <button className="bg-primary px-6 py-2 rounded-lg text-label-bold text-white hover:scale-103 hover:brightness-110 transition-all duration-300 cursor-pointer">
