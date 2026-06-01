@@ -36,7 +36,7 @@ const Footer = () => {
   return (
     <div className="bg-surface-container ">
       <div className="py-10 border-t border-b border-primary">
-        <section className="width grid grid-cols-3 justify-between gap-8">
+        <section className="width grid grid-cols-1 md:grid-cols-3 justify-between gap-8">
           <div className="space-y-4">
             <h1 className="text-h3 text-primary">FlyCake</h1>
             <p className="text-on-surface-variant">
@@ -44,13 +44,13 @@ const Footer = () => {
               cakes delivered with care across the city.
             </p>
             <div className="space-x-3">
-              <button className="text-primary">
+              <button className="text-primary hover:scale-110 cursor-pointer">
                 <AiOutlineGlobal size={20} />
               </button>
-              <button className="text-primary">
+              <button className="text-primary hover:scale-110 cursor-pointer">
                 <IoShareSocialSharp size={20} />
               </button>
-              <button className="text-primary">
+              <button className="text-primary hover:scale-110 cursor-pointer">
                 <FaQuestion size={20} />
               </button>
             </div>

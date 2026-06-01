@@ -1,7 +1,7 @@
 import { Poppins, Inter, Google_Sans_Flex } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
+import Navbar from "@/components/ui/Navbar";
+import Footer from "@/components/ui/Footer";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",

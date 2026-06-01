@@ -32,7 +32,7 @@ const WhyChooseUs = () => {
     <div className="bg-surface-container-low">
       <section className="width py-10 ">
         <h1 className="text-heading text-center mb-10">Why CakeHut?</h1>
-        <div className="flex justify-between gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 justify-between gap-6">
           {datas?.map((data, idx) => {
             const Icon = data.icon;
             const {title, description} = data;

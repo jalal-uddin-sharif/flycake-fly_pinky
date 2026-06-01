@@ -91,7 +91,7 @@ const Categories = () => {
         <div>
           <h1 className="text-heading">Explore Categories</h1>
         </div>
-        <div className="flex gap-6 mt-6">
+        <div className="flex overflow-x-auto gap-6 mt-6">
             {
               categoriesData?.map((category)=>(
                 <CategoryCard key={category.id} name={`${category.name}`} icon={`${category.icon}`}/>

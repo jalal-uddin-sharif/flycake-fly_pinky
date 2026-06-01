@@ -4,7 +4,7 @@ import { MdOutlineAddShoppingCart } from "react-icons/md";
 
 const ProductGrid = ({ trendingCakes, col = 4 }) => {
   return (
-    <div className="grid grid-cols-4 w-full gap-10 ">
+    <div className="grid grid-cols-1 md:grid-cols-4 w-full gap-10 ">
       {trendingCakes?.map((cake) => (
         <div
           key={cake.id}
