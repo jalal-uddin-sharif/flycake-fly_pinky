@@ -15,6 +15,7 @@
   --color-primary-container: #e30271;
   --color-secondary: #F7F7F7;
   --color-neutral: #1A1A1A;
+  --color-outline-variant: #e3bdc5;
 
 }
 
@@ -37,6 +38,7 @@
  --color-primary-container: var(--color-primary-container);
  --color-secondary: var(--color-secondary);
  --color-neutral: var(--color-neutral);
+ --color-outline-variant: var(--color-outline-variant)
 }
 
 @media (prefers-color-scheme: dark) {
