@@ -1,13 +1,8 @@
-import React from "react";
+import React from 'react';
 
-const LeftSidebar = () => {
-  return (
-    <section className="col-span-3 bg-surface-container-low  rounded-xl p-5">
-      <div className="flex justify-between">
-        <h1 className="uppercase text-lg font-semibold">Filters</h1>
-        <button className="text-primary cursor-pointer">Reset</button>
-      </div>
-      <div className="">
+const CakeType = () => {
+    return (
+        <div className="">
         <h2 className="my-4 text-lg">Cake Type</h2>
         <div className="space-y-2">
           <label className="flex gap-2 cursor-pointer items-center group">
@@ -75,17 +70,7 @@ const LeftSidebar = () => {
           </label>
         </div>
       </div>
-      <div>
-        <h2 className="my-4 text-lg">Flavor</h2>
-        <select name="" id="" className="border border-outline-variant w-full p-4 focus:ring-2 focus:border-primary focus:outline-0 rounded-lg outline-0">
-          <option value="">All</option>
-        </select>
-        
-      </div>
-      <div></div>
-      <div></div>
-    </section>
-  );
+    );
 };
 
-export default LeftSidebar;
+export default CakeType;
