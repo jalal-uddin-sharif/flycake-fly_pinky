@@ -10,7 +10,7 @@
 
   --color-surface: #fcf9f8;
   --color-on-surface-variant: #5b3f46;
-  --color-surface-container-low: #f0eded;
+  --color-surface-container-low: #f6f3f2;
   --color-surface-container: #fcf9f8;
   --color-primary: #FF2B85;
   --color-primary-container: #e30271;
@@ -19,6 +19,7 @@
   --color-outline-variant: #e3bdc5;
 
 }
+
 
 @theme inline {
   /* background */
@@ -40,6 +41,14 @@
  --color-secondary: var(--color-secondary);
  --color-neutral: var(--color-neutral);
  --color-outline-variant: var(--color-outline-variant)
+}
+
+::selection{
+  background-color: var(--color-pink-400)
+}
+::-moz-selection{
+  background-color: var(--color-pink-400)
+
 }
 
 @media (prefers-color-scheme: dark) {
