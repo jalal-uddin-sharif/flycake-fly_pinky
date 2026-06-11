@@ -2,6 +2,7 @@ import { Poppins, Inter, Google_Sans_Flex } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/ui/Navbar";
 import Footer from "@/components/ui/Footer";
+import Provider from "@/redux/Providers";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -48,7 +49,11 @@ export default function RootLayout({ children }) {
       </head>
       <body className={`min-h-full flex flex-col`}>
         <Navbar />
-        <main>{children}</main>
+        <main>
+          <Provider>
+            {children}
+          </Provider>
+          </main>
         <Footer/>
       </body>
     </html>

@@ -64,6 +64,7 @@ body {
   color: var(--foreground);
   font-family: var(--font-body);
   
+  
 }
 
 h1{
@@ -123,4 +124,9 @@ max-width: 1200px;
     display: inline-block;
     line-height: 1;
     vertical-align: middle;
+}
+
+.font-label-bold{
+  font-size: 16px;
+  font-weight: 500;
 }
