@@ -4,29 +4,31 @@ import AuthFromBanner from "@/components/authform/AuthFromBanner";
 import AuthHeader from "@/components/authform/AuthHeader";
 import Container from "@/components/ui/Container";
 import { setUser } from "@/redux/slices/authSlice";
+import { useRouter } from "next/navigation";
+
 
 import React from "react";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 
 
-const signUp = () => {
+const signIn = () => {
   const {
     register,
     handleSubmit,
-    watch,
     reset,
     formState: { errors },
   } = useForm();
   console.log(errors);
-  const password = watch("password");
+
 
   const dispatch = useDispatch()
+  const router = useRouter()
 
-  const handleSignUp = async (userData) => {
+  const handleSignIn = async (userData) => {
     console.log(userData);
     try {
-      const res = await fetch("/api/v1/auth/signup", {
+      const res = await fetch("/api/v1/auth/signin", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -42,6 +44,7 @@ const signUp = () => {
       console.log(result);
       if(result.success){
         dispatch(setUser(result.user))
+        router.push("/")
       }
       alert(result.message);
       // reset();
@@ -55,27 +58,13 @@ const signUp = () => {
       <div className="w-full max-w-md bg-white rounded-xl overflow-hidden">
         <AuthFromBanner />
         <section className="px-4">
-          <AuthFormButtons pathName="signup" />
+          <AuthFormButtons pathName="signin" />
           <AuthHeader
             title="Join the Hut"
             description="Create an account to start ordering."
           />
           <section>
-            <form onSubmit={handleSubmit(handleSignUp)} className="space-y-3">
-              <div>
-                <label className="block font-label-bold">Full Name</label>
-                <input
-                  {...register("fullName", { required: "Full name required" })}
-                  type="text"
-                  placeholder="Enter your full name"
-                  className="border border-outline-variant bg-surface-container-low rounded-lg w-full"
-                />
-                {errors?.fullName?.message && (
-                  <p className="text-base text-red-600 mx-2">
-                    {errors?.fullName?.message}
-                  </p>
-                )}
-              </div>
+            <form onSubmit={handleSubmit(handleSignIn)} className="space-y-3">
               <div>
                 <label className="block font-label-bold">Email Address</label>
                 <input
@@ -124,26 +113,6 @@ const signUp = () => {
                   </p>
                 )}
               </div>
-              <div>
-                <label className="block font-label-bold">
-                  Confirm Password
-                </label>
-                <input
-                  {...register("confirmPassword", {
-                    required: "Password is required",
-                    validate: (value) =>
-                      value === password || "Password do not match",
-                  })}
-                  type="password"
-                  placeholder="••••••••"
-                  className="border border-outline-variant bg-surface-container-low rounded-lg w-full"
-                />
-                {errors?.confirmPassword?.message && (
-                  <p className="text-base text-red-600 mx-2">
-                    {errors?.confirmPassword?.message}
-                  </p>
-                )}
-              </div>
               <button
                 type="submit"
                 className="font-label-bold py-4 bg-primary text-white rounded-xl w-full  transition-all duration-300 active:scale-105 cursor-pointer"
@@ -158,4 +127,4 @@ const signUp = () => {
   );
 };
 
-export default signUp;
+export default signIn;

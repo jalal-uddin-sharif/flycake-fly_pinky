@@ -48,13 +48,11 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className={`min-h-full flex flex-col`}>
-        <Navbar />
-        <main>
-          <Provider>
-            {children}
-          </Provider>
-          </main>
-        <Footer/>
+        <Provider>
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+        </Provider>
       </body>
     </html>
   );

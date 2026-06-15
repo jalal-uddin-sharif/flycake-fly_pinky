@@ -1,4 +1,5 @@
 "use client";
+import { useAuth } from "@/hooks/useAuth";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState } from "react";
@@ -8,6 +9,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineAddShoppingCart } from "react-icons/md";
 
 const Navbar = () => {
+  const user = useAuth()
   const pathName = usePathname();
   const navItems = [
     {
@@ -28,7 +30,6 @@ const Navbar = () => {
     },
   ];
 
-  const user = true;
   const [mobileScreen, setMobileScreen] = useState(false);
   return (
     <section className="relative bg-surface sticky top-0 z-50 shadow-md">
@@ -99,9 +100,11 @@ const Navbar = () => {
               <CgProfile className="text-3xl text-on-surface-variant cursor-pointer" />
             </div>
           ) : (
+            <Link href="/signup">
             <button className="bg-primary px-6 py-2 rounded-lg text-label-bold text-white hover:scale-103 hover:brightness-110 transition-all duration-300 cursor-pointer">
               Login
             </button>
+            </Link>
           )}
         </div>
       </div>

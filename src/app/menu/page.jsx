@@ -1,9 +1,12 @@
+"use client"
 import Filter from "@/components/menu/Filter";
 import Items from "@/components/menu/Items";
 import Container from "@/components/ui/Container";
 import React from "react";
 
 const menu = () => {
+  
+ 
   return (
     <div className="bg-[#fcf9f8] py-10">
       <Container>

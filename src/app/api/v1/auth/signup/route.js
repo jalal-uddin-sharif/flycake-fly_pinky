@@ -7,7 +7,7 @@ export async function POST(req) {
   try {
     await connectDB();
     const { fullName, email, password } = await req.json();
-    const normalizedEmail = email?.trim().toLowerCase()
+    const normalizedEmail = email?.trim().toLowerCase();
     if (!fullName || !email || !password) {
       return NextResponse.json(
         { message: "All field are required" },
@@ -16,30 +16,35 @@ export async function POST(req) {
     }
 
     const existingUser = await User.findOne({ email });
-    if(existingUser){
+    if (existingUser) {
       return NextResponse.json(
-        {message: "Email Already Exist"},
-        {status: 400}
-      )
+        { message: "Email Already Exist" },
+        { status: 400 },
+      );
     }
 
-    const hashedPassword = await bcrypt.hash(password,10)
+    const hashedPassword = await bcrypt.hash(password, 10);
 
-    await User.create({
+    const newUser = await User.create({
       fullName,
       email: normalizedEmail,
       password: hashedPassword,
-      
-    })
+    });
 
     return NextResponse.json(
       {
         success: true,
-        message: "User Signup successful"
-      }, {status: 201}
-    )
+        message: "User Signup successful",
 
-
+        user: {
+          _id: newUser._id,
+          name: newUser.fullName,
+          email: newUser.email,
+          role: newUser.role,
+        },
+      },
+      { status: 201 },
+    );
 
     return NextResponse.json({
       message: "connected dasboard",
